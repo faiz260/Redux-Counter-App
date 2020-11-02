@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {useSelector}from "react-redux";
 
-function CounterOutput(props) {
-    console.log("Output",props)
+function CounterOutput() {
+    const counter = useSelector((state) => state.counter)
+    console.log("COUNTER  >>>> ",counter)
     return (
         <div>
-            Counter Value: {props.counter}
+            Counter Value: {counter}
         </div>
     )
 }
